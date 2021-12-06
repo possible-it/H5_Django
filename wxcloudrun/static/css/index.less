@@ -1,0 +1,98 @@
+@import './reset.min.less';
+@import './swiper-bundle.min.less';
+@import './animate.min.less';
+@import './common.less';
+html {
+    font-size: 100px;
+}
+
+@keyframes musicMove {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+// 基础样式
+html, body {
+    height: 100%;
+    overflow: hidden;
+    background: url('../images/wall-BG.gif') no-repeat center center;
+    background-size: cover;
+    .container {
+        position: relative;
+        margin: 0 auto;
+        max-width: 750px;
+        height: 100%;
+        // 滑屏区域
+        .swiperBox {
+            height: 100%;
+            .swiper,.swiper-slide {
+                position: relative;
+                height: 100%;
+                overflow: hidden;
+            }
+            .page {
+                background: url('../images/wall-BG.gif') no-repeat center center;
+                background-size: cover;
+            }
+            .page1 {
+                background: url('../images/page1.jpg') no-repeat center center;
+                background-size: cover;
+            }
+            .page2 {
+                background: url('../images/page2.jpg') no-repeat center center;
+                background-size: cover;
+            }
+            .page3 {
+                background: url('../images/page3.jpeg') no-repeat center center;
+                background-size: cover;
+            }
+            .page4 {
+                background: url('../images/page4.jpg') no-repeat center center;
+                background-size: cover;
+            }
+            .page5 {
+                background: url('../images/page5.jpg') no-repeat center center;
+                background-size: cover;
+            }
+            .page6 {
+                background: url('../images/page6.jpeg') no-repeat center center;
+                background-size: cover;
+            }
+           
+        }
+        // 音乐区域
+        .musicBox {
+            .musicAudio {
+                display: none;
+            }
+            #musicIcon {
+                display: none;
+                position: absolute;
+                top: .2rem;
+                left: .2rem;
+                z-index: 9999;
+                width: .6rem;
+                height: .6rem;
+                background: url('../images/music_icon.svg') no-repeat;
+                background-size: 100% 100%; 
+                &.move {
+                    // 音乐图标旋转
+                    animation: musicMove 1s linear infinite;
+                }
+            }
+        }
+        // .arrow {
+        //     position: fixed;
+        //     bottom: 0;
+        //     left: 50%;
+        //     margin-left: 0.24rem;
+        //     width: 0.48rem;
+        //     height: 0.48rem;
+        //     background: url('../images/1.gif');
+        //     background-size: 100% 100%;
+        // }
+    }
+}
